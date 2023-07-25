@@ -145,7 +145,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url(../img/image\ 6.svg) top left/54% no-repeat, url(../img/routes-map.png) center/62% no-repeat, url(../img/image\ 5.svg) top right/54% no-repeat;
+    background: url(../img/routes-map.png) center/62% no-repeat, url(../img/image\ 6.svg) top left/54% no-repeat, url(../img/image\ 5.svg) top right/54% no-repeat;
 }
 .routes-title {
     font-size: 20px;
