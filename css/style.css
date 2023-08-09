@@ -240,6 +240,7 @@ header {
     text-align: left;
 }
 
+<<<<<<< HEAD
 .application {
     background: url(../img/application.jpg);
     padding: 40px 0;
@@ -344,6 +345,52 @@ form p button {
 
 .contacts-title {
     margin: 0 0 15px 0;
+=======
+.prospects {
+    padding: 24px 116px;
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+    text-align: left;
+}
+
+.prospects-title {
+    font-size: 30px;
+    line-height: 96.4%; /* 28.92px */
+}
+
+.prospects-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.prospects-item {
+    max-width: 596px;
+    display: flex;
+    gap: 24px;
+}
+
+#widespreading {
+    border: 1px solid #000;
+}
+
+svg {
+    display: inline-block
+}
+
+.prospects-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+}
+
+.prospects-column-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 98.4%; /* 15.744px */
+>>>>>>> feature/add-prospects-block
 }
 
 @media (max-width: 900px) {
@@ -362,11 +409,17 @@ form p button {
     .routes-content {
         background-size: 54%, contain, contain;
     }
+    .prospects-item {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 670px) {
     .goods {
         padding: 24px;
+    }
+    .prospects-body {
+        flex-wrap: wrap;
     }
 }
 
