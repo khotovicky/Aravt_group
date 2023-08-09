@@ -9,7 +9,7 @@ body {
 }
 
 
-header {
+.nav {
     padding: 14px 121px;
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +39,7 @@ header {
     padding: 0 0 0 28px;
 }
 
-.secondHeader {
+.header {
     background: url(../img/secondHeaderImg.jpg) center/cover no-repeat;
     padding: 221px 24px;
     display: flex;
@@ -49,20 +49,20 @@ header {
     color: #F0F0F0;
 }
 
-.second-title {
+.header-title {
     font-size: 80px;
     font-weight: 700;
     line-height: 111.4%;
 }
 
-.subtitle {
+.header-subtitle {
     padding: 0 0 37px 0;
     font-size: 24px;
     font-weight: 600;
     line-height: 111.4%;
 }
 
-.requestButton {
+.request-button {
     padding: 20px 52px;
     border-radius: 10px;
     background: #F0F0F0;
@@ -91,9 +91,6 @@ header {
     gap: 100px;
 }
 
-.about-title{
-    
-}
 
 .title {
     color: #0C2443;
@@ -211,11 +208,6 @@ header {
     text-align: left;
 }
 
-.goods-body {
-    display: flex;
-    justify-content: space-between;
-}
-
 .goods-items {
     padding: 0 100px;
     background: url(../img/goodsIconOne.svg) 0 0/contain no-repeat, url(../img/goodsIconTwo.svg) 100%/contain no-repeat;
@@ -267,10 +259,6 @@ header {
 
 #widespreading {
     border: 1px solid #000;
-}
-
-svg {
-    display: inline-block
 }
 
 .prospects-column {
@@ -394,7 +382,7 @@ form p button {
 }
 
 @media (max-width: 900px) {
-    header {
+    .nav {
         padding: 14px 24px;
         flex-direction: column;
         align-items: start;
