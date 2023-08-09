@@ -1,13 +1,10 @@
 @import "nullstyle.css";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Montserrat:wght@500;600;700&display=swap');
 
-
-
 body {
     font-family: Montserrat;
     text-align: center;
 }
-
 
 .nav {
     padding: 14px 121px;
@@ -20,7 +17,6 @@ body {
     font-family: Inter;
     font-weight: 500;
 }
-
 
 .brand-name {
     padding: 0 28px 0 0;
@@ -91,7 +87,6 @@ body {
     gap: 100px;
 }
 
-
 .title {
     color: #0C2443;
     font-size: 30px;
@@ -107,6 +102,7 @@ body {
 .services {
     padding: 24px 0;
 }
+
 .services-title {
     text-align: left;
     padding: 0 0 24px 120px;
@@ -144,6 +140,7 @@ body {
     justify-content: space-between;
     background: url(../img/routes-map.png) center/62% no-repeat, url(../img/image\ 6.svg) top left/54% no-repeat, url(../img/image\ 5.svg) top right/54% no-repeat;
 }
+
 .routes-title {
     font-size: 20px;
     line-height: 96.4%;
@@ -324,6 +321,7 @@ form p:nth-child(3) {
 #goods {
     flex: 1 1 auto;
 }
+
 #weight {
     flex: 0 0 95px;
 }
