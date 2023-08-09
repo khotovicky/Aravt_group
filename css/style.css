@@ -240,6 +240,112 @@ header {
     text-align: left;
 }
 
+.application {
+    background: url(../img/application.jpg);
+    padding: 40px 0;
+}
+
+.application-content {
+    background: #fff;
+    max-width: 568px;
+    margin: 0 120px 0 auto;
+    border-radius: 20px;
+    padding: 42px 34px 34px 35px;
+    text-align: left;
+}
+
+.application-title {
+    padding: 0 0 23px 0;
+    font-size: 25px;
+}
+
+.application-title span {
+    color: #0C2443;
+}
+
+.application-subtitle {
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 29px 78px 0 0;
+}
+
+form p input {
+    border-radius: 7px;
+    border: 1px solid #969292;
+    width: 100%;
+    padding: 14px 0 14px 34px;
+}
+
+form p:nth-child(3) {
+    display: flex;
+    gap: 15px;
+}
+
+#goods {
+    flex: 1 1 auto;
+}
+#weight {
+    flex: 0 0 95px;
+}
+
+form p:nth-child(5) {
+    border: 1px solid #969292;
+    height: 153px;
+    border-radius: 7px;
+}
+
+form p:nth-child(5) input {
+    border: none;
+}
+
+form p button {
+    margin: 14px 0 0 0;
+    padding: 20px 52px;
+    border-radius: 10px;
+    background: #4F637E;
+    cursor:pointer;
+    color: #fff;
+}
+
+.footer {
+    font-family: Inter;
+    padding: 67px 114px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.footer-title {
+    margin: -23px 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    color: #0C2443;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contacts-title {
+    margin: 0 0 15px 0;
+}
+
 @media (max-width: 900px) {
     header {
         padding: 14px 24px;
@@ -274,6 +380,9 @@ header {
     .goods-items {
         padding: none;
         background: none;
+    }
+    .application-content {
+        margin: 0;
     }
 }
 
