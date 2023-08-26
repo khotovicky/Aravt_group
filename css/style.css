@@ -1,15 +1,12 @@
 @import "nullstyle.css";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Montserrat:wght@500;600;700&display=swap');
 
-
-
 body {
     font-family: Montserrat;
     text-align: center;
 }
 
-
-header {
+.nav {
     padding: 14px 121px;
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +17,6 @@ header {
     font-family: Inter;
     font-weight: 500;
 }
-
 
 .brand-name {
     padding: 0 28px 0 0;
@@ -39,7 +35,7 @@ header {
     padding: 0 0 0 28px;
 }
 
-.secondHeader {
+.header {
     background: url(../img/secondHeaderImg.jpg) center/cover no-repeat;
     padding: 221px 24px;
     display: flex;
@@ -49,20 +45,20 @@ header {
     color: #F0F0F0;
 }
 
-.second-title {
+.header-title {
     font-size: 80px;
     font-weight: 700;
     line-height: 111.4%;
 }
 
-.subtitle {
+.header-subtitle {
     padding: 0 0 37px 0;
     font-size: 24px;
     font-weight: 600;
     line-height: 111.4%;
 }
 
-.requestButton {
+.request-button {
     padding: 20px 52px;
     border-radius: 10px;
     background: #F0F0F0;
@@ -91,10 +87,6 @@ header {
     gap: 100px;
 }
 
-.about-title{
-    
-}
-
 .title {
     color: #0C2443;
     font-size: 30px;
@@ -110,6 +102,7 @@ header {
 .services {
     padding: 24px 0;
 }
+
 .services-title {
     text-align: left;
     padding: 0 0 24px 120px;
@@ -147,6 +140,7 @@ header {
     justify-content: space-between;
     background: url(../img/routes-map.png) center/62% no-repeat, url(../img/image\ 6.svg) top left/54% no-repeat, url(../img/image\ 5.svg) top right/54% no-repeat;
 }
+
 .routes-title {
     font-size: 20px;
     line-height: 96.4%;
@@ -211,11 +205,6 @@ header {
     text-align: left;
 }
 
-.goods-body {
-    display: flex;
-    justify-content: space-between;
-}
-
 .goods-items {
     padding: 0 100px;
     background: url(../img/goodsIconOne.svg) 0 0/contain no-repeat, url(../img/goodsIconTwo.svg) 100%/contain no-repeat;
@@ -267,10 +256,6 @@ header {
 
 #widespreading {
     border: 1px solid #000;
-}
-
-svg {
-    display: inline-block
 }
 
 .prospects-column {
@@ -336,6 +321,7 @@ form p:nth-child(3) {
 #goods {
     flex: 1 1 auto;
 }
+
 #weight {
     flex: 0 0 95px;
 }
@@ -394,7 +380,7 @@ form p button {
 }
 
 @media (max-width: 900px) {
-    header {
+    .nav {
         padding: 14px 24px;
         flex-direction: column;
         align-items: start;
