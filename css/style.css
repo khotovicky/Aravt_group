@@ -348,6 +348,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     line-height: 1;
+    position: relative;
 }
 
 .train {
@@ -394,19 +395,23 @@ form {
     padding: 29px 78px 0 0;
 }
 
-form p input, textarea {
+form p {
+    position: relative;
+}
+
+.input, textarea {
     border-radius: 7px;
     border: 1px solid #969292;
     width: 100%;
     padding: 14px 0 14px 34px;
 }
 
-form p input:focus, textarea:focus {
+.input:focus, textarea:focus {
     border: 1px solid #000;
 }
 
 
-form p:nth-child(3) {
+form div {
     display: flex;
     gap: 15px;
 }
@@ -423,8 +428,17 @@ textarea {
     height: 153px;
 }
 
-form p:nth-child(5) input {
-    border: none;
+.input.request {
+    border-color: red;
+}
+
+form p.request::after, form div p.request::after{
+    content: "Заполните это поле";
+    color: red;
+    font-size: 8px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
 }
 
 form p button {
@@ -439,7 +453,6 @@ form p button {
 form p button:active {
     opacity: 0.8;
 }
-
 
 .footer {
     font-family: Inter;
@@ -631,6 +644,49 @@ form p button:active {
     top: 0;
     pointer-events: none;
 }
+
+.accept {
+    background: #fff;
+    box-shadow: #4F637E 0 0 3px 3px;
+    border-radius: 50%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    top: 25%;
+    left: 25%;
+    width: 60%;
+    height: 60%;
+}
+
+.accept p {
+    font-size: 26px;
+}
+
+.accept-button {
+    padding: 20px 0;
+    width: 20%;
+    border-radius: 10px;
+    background: rgb(12, 36, 67);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.accept-button:hover, .accept-button:hover a {
+    background: rgb(118, 215, 133);
+    color: #fff;
+}
+.accept-button:active, .accept-button:active a {
+    background: rgba(12, 36, 67, 0.9);
+    color: #fff;
+}
+
+
+
 
 @media (max-width: 767px) {
     .header-title {
