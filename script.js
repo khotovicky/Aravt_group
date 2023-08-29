@@ -11,6 +11,9 @@ const inputs = document.querySelectorAll('input')
 const textarea = document.querySelector('textarea')
 const submitButton = document.querySelector('form p button')
 const acceptField = document.querySelector('.accept')
+const wrapper = document.querySelector('.wrapper')
+const overlay = document.querySelector('.overlay')
+
 
 submitButton.onclick = function() {
     console.log(inputs);
@@ -32,10 +35,12 @@ submitButton.onclick = function() {
             input.value = ''
         }
         textarea.value = ''
+        overlay.classList.add('active')
     }
 }
 
 const acceptButton = document.querySelector('.accept-button')
 acceptButton.onclick = function() {
     acceptField.style.display = 'none'
+    overlay.classList.remove('active')
 }

@@ -483,6 +483,10 @@ form p button:active {
     gap: 8px;
 }
 
+.footer-nav div:hover {
+    text-decoration: underline;
+}
+
 .footer-contacts {
     display: flex;
     flex-direction: column;
@@ -501,11 +505,6 @@ form p button:active {
 
     .nav{
         padding: 0;
-    }
-
-    .overlay.active {
-        opacity: 0.5;
-        pointer-events: all;
     }
 
     .nav-list {
@@ -643,6 +642,11 @@ form p button:active {
     left: 0;
     top: 0;
     pointer-events: none;
+}
+
+.overlay.active {
+    opacity: 0.5;
+    pointer-events: all;
 }
 
 .accept {
