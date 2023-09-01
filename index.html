@@ -15,12 +15,12 @@
                     <div class="brand-text">Aravt Group</div>
                 </div>
                 <div class="nav-list base-transition">
-                    <div><a href="#about">О нас</a></div>
-                    <div><a href="#routes">Маршруты</a></div>
-                    <div><a href="#prospects">Перспективы</a></div>
+                    <div class="nav-list-item"><a href="#about">О нас</a></div>
+                    <div class="nav-list-item"><a href="#routes">Маршруты</a></div>
+                    <div class="nav-list-item"><a href="#prospects">Перспективы</a></div>
                     <div class="nav-list-button"></div>
                 </div>
-                <div id="last-item"><a href="#application">Оставить заявку</a></div>
+                <div id="last-item"><a href="#order">Оставить заявку</a></div>
                 <div class="nav-burger">
                     <span></span>
                 </div>
@@ -31,7 +31,7 @@
                 <div class="header-content container">
                     <div class="header-title">Доставляем ваш успех!</div>
                     <div class="header-subtitle">Логистические решения для вашего бизнеса</div>
-                    <button class="request-button"><a href="#application">Запрос на расчет</a></button>
+                    <button class="request-button"><a href="#order">Запрос на расчет</a></button>
                 </div> 
             </header>
             <section class="about" id="about">
@@ -129,21 +129,21 @@
                 </div>
             </section>
             <div class="train"></div>
-            <section class="application" id="application">
+            <section class="order" id="order">
                 <div class="container">
-                    <div class="application-content">
-                        <div class="application-title">Оставьте вашу <span>заявку</span> </div>
-                        <div class="application-subtitle">Заполните форму и мы перезвоним вам для консультации</div>
-                        <form action="#" method="post" enctype="multipart/form-data">
-                            <p><input tabindex="1" placeholder="Ваше имя" type="text" name="username" value=""></p>
-                            <p><input tabindex="2" placeholder="Ваш номер телефона" type="tel" name="usernumber" value=""></p>
-                            <p>
-                                <input id="goods" tabindex="3" placeholder="Груз" type="text" name="goods" value="">
-                                <input id="weight" tabindex="4" placeholder="Вес" type="text" name="weight" value="">
-                            </p>
-                            <p><input tabindex="5" placeholder="Маршрут груза" type="text" name="route" value=""></p>
-                            <p><textarea tabindex="6" placeholder="Дополнительный комментарий" type="text" name="comment" value=""></textarea></p>
-                            <p><button  tabindex="7" type="submit">Отправить</button></p>
+                    <div class="order-content">
+                        <div class="order-title">Оставьте вашу <span>заявку</span> </div>
+                        <div class="order-subtitle">Заполните форму и мы перезвоним вам для консультации</div>
+                        <form id="order-form" action="#" method="post" enctype="multipart/form-data">
+                            <p class="field-wrapper"><input required class="field" tabindex="1" placeholder="Ваше имя" type="text" name="username" value=""></p>
+                            <p class="field-wrapper"><input required class="field" tabindex="2" placeholder="Ваш номер телефона" type="number" name="usernumber" value=""></p>
+                            <div>
+                                <p id="goods" class="field-wrapper"><input required class="field" tabindex="3" placeholder="Груз" type="text" name="goods" value=""></p>
+                                <p id="weight" class="field-wrapper"><input required class="field" tabindex="4" placeholder="Вес" type="text" name="weight" value=""></p>
+                            </div>
+                            <p class="field-wrapper"><input required class="field" tabindex="5" placeholder="Маршрут груза" type="text" name="route" value=""></p>
+                            <p class="field-wrapper"><textarea class="field" tabindex="6" placeholder="Дополнительный комментарий" type="text" name="comment" value=""></textarea></p>
+                            <p><button  tabindex="7" type="button">Отправить</button></p>
                         </form>
                     </div>
                 </div>
@@ -174,7 +174,14 @@
 
     <div class="overlay base-transition"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <div class="notification">
+        <p class="notification-text"></p>
+        <button class="notification-button">OK</button>
+    </div>
+
+    <script src="sideNav.js"></script>
+    <script src="notifications.js"></script>
+    <script src="orderForm.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

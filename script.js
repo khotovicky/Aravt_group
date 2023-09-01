@@ -1,8 +1,5 @@
-$(document).ready(function() {
-    $('.nav-burger').click(() => {
-        $('.overlay, .nav-list').addClass('active')
-    })
-    $('.nav-list div, .overlay').click(() => {
-        $('.overlay, .nav-list').removeClass('active')
-    })
-})
+const overlay = document.querySelector('.overlay')
+
+const { openSideNav, closeSideNav } = initSideNavService(overlay)
+const { showNotification, hideNotification } = initNotificationsService(overlay)
+initOrderFormService(showNotification)

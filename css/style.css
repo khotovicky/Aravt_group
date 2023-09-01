@@ -348,6 +348,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     line-height: 1;
+    position: relative;
 }
 
 .train {
@@ -360,12 +361,12 @@ body {
     padding-top: 34%;
 }
 
-.application {
+.order {
     background: url(../img/application.jpg) 0 0/cover fixed;
     padding: 40px 0;
 }
 
-.application-content {
+.order-content {
     margin: 0 0 0 auto;
     background: #fff;
     max-width: 568px;
@@ -374,39 +375,43 @@ body {
     text-align: left;
 }
 
-.application-title {
+.order-title {
     padding: 0 0 23px 0;
     font-size: 25px;
 }
 
-.application-title span {
+.order-title span {
     color: #0C2443;
 }
 
-.application-subtitle {
+.order-subtitle {
     font-size: 16px;
 }
 
-form {
+#order-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 29px 78px 0 0;
 }
 
-form p input, textarea {
+.field-wrapper {
+    position: relative;
+}
+
+.field {
     border-radius: 7px;
     border: 1px solid #969292;
     width: 100%;
     padding: 14px 0 14px 34px;
 }
 
-form p input:focus, textarea:focus {
+.field:focus {
     border: 1px solid #000;
 }
 
 
-form p:nth-child(3) {
+form div {
     display: flex;
     gap: 15px;
 }
@@ -421,13 +426,23 @@ form p:nth-child(3) {
 
 textarea {
     height: 153px;
+    resize: vertical;
 }
 
-form p:nth-child(5) input {
-    border: none;
+.field.request {
+    border-color: red;
 }
 
-form p button {
+.field-wrapper.request::after, #order-form div p.request::after{
+    content: "Заполните это поле";
+    color: red;
+    font-size: 8px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+#order-form p button {
     margin: 14px 0 0 0;
     padding: 20px 52px;
     border-radius: 10px;
@@ -436,10 +451,9 @@ form p button {
     color: #fff;
 }
 
-form p button:active {
+#order-form p button:active {
     opacity: 0.8;
 }
-
 
 .footer {
     font-family: Inter;
@@ -470,6 +484,10 @@ form p button:active {
     gap: 8px;
 }
 
+.footer-nav div:hover {
+    text-decoration: underline;
+}
+
 .footer-contacts {
     display: flex;
     flex-direction: column;
@@ -488,11 +506,6 @@ form p button:active {
 
     .nav{
         padding: 0;
-    }
-
-    .overlay.active {
-        opacity: 0.5;
-        pointer-events: all;
     }
 
     .nav-list {
@@ -632,6 +645,54 @@ form p button:active {
     pointer-events: none;
 }
 
+.overlay.active {
+    opacity: 0.5;
+    pointer-events: all;
+}
+
+.notification {
+    background: #fff;
+    box-shadow: #4F637E 0 0 3px 3px;
+    border-radius: 50%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    top: 25%;
+    left: 25%;
+    width: 60%;
+    height: 60%;
+}
+
+.notification-text {
+    font-size: 26px;
+}
+
+.notification-button {
+    padding: 20px 0;
+    width: 20%;
+    border-radius: 10px;
+    background: rgb(12, 36, 67);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.notification-button:hover, .notification-button:hover a {
+    background: rgb(118, 215, 133);
+    color: #fff;
+}
+.notification-button:active, .notification-button:active a {
+    background: rgba(12, 36, 67, 0.9);
+    color: #fff;
+}
+
+
+
+
 @media (max-width: 767px) {
     .header-title {
         font-size: 48px;
@@ -723,16 +784,16 @@ form p button:active {
     .goods-name {
         font-size: 16px;
     }
-    .application-content {
+    .order-content {
         margin: 0;
     }
-    form {
+    #order-form {
         padding-right: 0;
     }
-    .application .container {
+    .order .container {
         padding: 0 15px;
     }
-    .application-title {
+    .order-title {
         font-size: 20px;
     }
     .footer-content {
